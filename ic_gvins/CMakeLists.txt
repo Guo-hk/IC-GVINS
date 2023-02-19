@@ -21,7 +21,7 @@ add_library(ic_gvins_core SHARED
         ${GVINS_SOURCE})
 
 # OpenCV
-find_package(OpenCV REQUIRED)
+find_package(OpenCV 3.4 REQUIRED)
 target_link_libraries(ic_gvins_core ${OpenCV_LIBS})
 
 # glog
@@ -38,7 +38,9 @@ find_package(yaml-cpp REQUIRED)
 target_link_libraries(ic_gvins_core ${YAML_CPP_LIBRARIES})
 
 # Ceres
-find_package(Ceres REQUIRED)
+find_package(Ceres 2
+             PATHS /home/guo/SoftWare/Third/ceres-solver-2.1.0/install/lib/cmake/
+             REQUIRED)
 target_link_libraries(ic_gvins_core ${CERES_LIBRARIES})
 
 # boost

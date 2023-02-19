@@ -164,6 +164,7 @@ IntegrationState PreintegrationNormal::stateFromData(const IntegrationStateData 
 void PreintegrationNormal::constructState(const double *const *parameters, IntegrationState &state0,
                                           IntegrationState &state1) {
     state0 = IntegrationState{
+        .time = 0,
         .p  = {parameters[0][0], parameters[0][1], parameters[0][2]},
         .q  = {parameters[0][6], parameters[0][3], parameters[0][4], parameters[0][5]},
         .v  = {parameters[1][0], parameters[1][1], parameters[1][2]},
@@ -172,6 +173,7 @@ void PreintegrationNormal::constructState(const double *const *parameters, Integ
     };
 
     state1 = IntegrationState{
+        .time = 0,
         .p  = {parameters[2][0], parameters[2][1], parameters[2][2]},
         .q  = {parameters[2][6], parameters[2][3], parameters[2][4], parameters[2][5]},
         .v  = {parameters[3][0], parameters[3][1], parameters[3][2]},

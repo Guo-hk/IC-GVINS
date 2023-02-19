@@ -661,7 +661,9 @@ bool GVINS::gvinsInitialization() {
         .v    = velocity,
         .bg   = bg,
         .ba   = {0, 0, 0},
+        .s    = {0, 0, 0},
         .sodo = 0.0,
+        .avb  = {0, 0},
         .sg   = {0, 0, 0},
         .sa   = {0, 0, 0},
     };
